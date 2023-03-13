@@ -1,0 +1,5 @@
+@import "../CSSRULES/variables.css";
+.container {
+  margin: 0 auto;
+  width: 85%;
+}

@@ -1,0 +1,16 @@
+.loading {
+  max-width: clamp(10rem, 30rem, 10vw);
+
+  margin: 0 auto;
+  /* max-width: 20rem; */
+}
+
+.loadingGif {
+  width: 100%;
+}
+
+.loadingText {
+  display: block;
+  font-size: 1.3rem;
+  text-align: center;
+}

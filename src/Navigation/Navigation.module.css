@@ -1,0 +1,72 @@
+@import "../CSSRULES/variables";
+
+.navigationWrapper {
+  background-color: var(--color-primary-2);
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.navigation {
+  max-width: 40rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  position: relative;
+}
+
+li {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.buble {
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  top: -150%;
+  left: 0;
+  background-color: #fff;
+  border: 5px solid var(--color-primary-1);
+  transition: 0.25s all linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.steam.selected ~ .buble {
+  transform: translateX(calc(100px * 1));
+}
+
+.steam:hover ~ .buble {
+  transform: translateX(calc(100px * 1)) !important;
+}
+
+.gog.selected ~ .buble {
+  transform: translateX(calc(100px * 2));
+}
+
+.gog:hover ~ .buble {
+  transform: translateX(calc(100px * 2)) !important;
+}
+
+.uplay.selected ~ .buble {
+  transform: translateX(calc(100px * 3));
+}
+
+.uplay:hover ~ .buble {
+  transform: translateX(calc(100px * 3)) !important;
+}
+
+.humble.selected ~ .buble {
+  transform: translateX(calc(100px * 4.5));
+}
+
+.humble:hover ~ .buble {
+  transform: translateX(calc(100px * 4.5)) !important;
+}

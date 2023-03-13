@@ -1,0 +1,72 @@
+@import "../CSSRULES/variables.css";
+.gameCard {
+  background-color: var(--color-primary-2);
+  min-width: 20rem;
+  max-width: 20rem;
+  /* overflow-y: hidden; */
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16);
+}
+
+.gameTitle {
+  text-align: center;
+  padding: 0.5rem 0;
+  font-weight: 700;
+  background-color: var(--color-primary-1);
+}
+
+.gameInfo {
+  background-color: var(--color-primary-1);
+  border-radius: 10px;
+  border-top: 1px solid black;
+}
+
+.gamePicture {
+  display: flex;
+  justify-content: center;
+  padding: 0.4rem;
+  max-height: 45px;
+}
+
+.gamePicture img {
+  border-radius: 10px;
+  object-fit: cover;
+  /* height: 100%; */
+}
+
+.savings {
+  position: absolute;
+
+  top: -7%;
+  right: -2%;
+  border-radius: 50%;
+  padding: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotateZ(15deg);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  background-color: var(--color-secondary-1-1);
+}
+
+.savings span {
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.savings span:nth-child(2) {
+  font-size: 0.7rem;
+}
+
+.gameInfoDetails {
+  display: flex;
+  align-items: center;
+
+  padding: 0.5rem;
+  gap: 0.3rem;
+}
+
+.gameDetails {
+  font-size: 1rem;
+}
