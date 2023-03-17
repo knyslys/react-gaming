@@ -1,10 +1,10 @@
 import React, { useMemo } from "react";
-import Container from "../UI/Container";
-import GamesFilter from "./GamesFilter";
+
+import Filter from "../FIlter/Filter";
 import Navigation from "../Navigation/Navigation";
 import GamesList from "./GamesList";
 import Loading from "../UI/Loading";
-import { motion, AnimatePresence } from "framer-motion";
+
 import classes from "./Games.module.css";
 function Games({
   isLoading,
@@ -13,9 +13,11 @@ function Games({
   testKey,
   gamesPerPage,
   gamePageIndex,
+  setStoreFilter,
 }) {
-  console.log(isLoading);
-
+  const setFilters = (filterBy) => {
+    setStoreFilter(filterBy);
+  };
   return isLoading === true || isLoading === undefined ? (
     <React.Fragment>
       <Navigation setStore={setStores} />
@@ -35,8 +37,3 @@ function Games({
 }
 
 export default Games;
-
-{
-  /* <GamesFilter></GamesFilter>
-    <GamesList></GamesList> */
-}

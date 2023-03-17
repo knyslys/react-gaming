@@ -1,0 +1,63 @@
+@import "../CSSRULES/variables.css";
+.filter {
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+}
+
+.filterPrice {
+  /* font-size: 5rem; */
+  transition: 0.5s all linear;
+  background-color: #fff;
+  border: 1px solid black;
+  width: 7rem;
+  height: 3rem;
+  /* background-color: transparent; */
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.filterPrice::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 3rem;
+  background-color: blue;
+  content: "";
+  border-radius: 50%;
+  /* transition: 0.5s all linear; */
+}
+
+.filterRating {
+  /* font-size: 5rem; */
+  background-color: #fff;
+  border: 1px solid black;
+  width: 7rem;
+  height: 3rem;
+  /* background-color: transparent; */
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.filterRating::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 3rem;
+  background-color: blue;
+  content: "";
+  border-radius: 50%;
+  transition: 0.5s all linear;
+}
+
+.active {
+  background-color: var(--color-primary-2);
+}
+
+.active::before {
+  transform: translateX(120%);
+}
