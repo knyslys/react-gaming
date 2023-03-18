@@ -4,9 +4,8 @@ import classes from "./Pagination.module.css";
 function Pagination({ gamesPerPage, howManyGames, gamePageIndex, changePage }) {
   const allPages = Math.ceil(howManyGames.length / gamesPerPage);
   const pages = [];
-
+  if (allPages === 0 || allPages === 1) return;
   const switchPage = (i) => {
-    console.log("pagination.js");
     changePage(i);
   };
   function renderPages() {

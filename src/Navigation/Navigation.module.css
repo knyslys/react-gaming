@@ -3,7 +3,7 @@
 .navigationWrapper {
   background-color: var(--color-primary-2);
   padding: 1rem 0;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
 }

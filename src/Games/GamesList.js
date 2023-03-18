@@ -3,12 +3,13 @@ import classes from "./GamesList.module.css";
 import GameItem from "./GameItem";
 import { AnimatePresence, motion } from "framer-motion";
 
-function GamesList({ games, gamesPerPage, gamePageIndex }) {
+function GamesList({ games, gamesPerPage, gamePageIndex, userIsSearching }) {
   const gameItems = [];
 
   const renderGames = () => {
-    console.log(gamesPerPage);
-    console.log(gamePageIndex);
+    if (userIsSearching) {
+      gamePageIndex = 1;
+    }
     for (
       let i = (gamePageIndex - 1) * gamesPerPage;
       i <= gamePageIndex * gamesPerPage;
@@ -24,6 +25,7 @@ function GamesList({ games, gamesPerPage, gamePageIndex }) {
         <GameItem game={games[i]} key={games[i].dealID} opacityTime={time} />
       );
     }
+
     console.log(gameItems);
     return gameItems;
   };
@@ -31,7 +33,6 @@ function GamesList({ games, gamesPerPage, gamePageIndex }) {
   return (
     <AnimatePresence mode="popLayout">
       <motion.div
-        key={Math.random()}
         animate={{ opacity: [0.5, 1] }}
         exit={{ opacity: [0], transition: { duration: 0.5 } }}
         transition={{ duration: 0.5 }}

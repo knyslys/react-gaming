@@ -2,18 +2,23 @@
 .filter {
   /* background-color: red; */
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  padding: 0 2rem;
 }
 
 .filterPrice {
-  /* font-size: 5rem; */
+  border: 1px solid rgba(0, 0, 0, 0.212);
   transition: 0.5s all linear;
   background-color: #fff;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 7rem;
   height: 3rem;
   /* background-color: transparent; */
-  border-radius: 10px;
+  border-radius: 500%;
   position: relative;
   cursor: pointer;
 }
@@ -24,7 +29,7 @@
   left: 0;
   height: 100%;
   width: 3rem;
-  background-color: blue;
+  background-color: var(--color-secondary-2-2);
   content: "";
   border-radius: 50%;
   /* transition: 0.5s all linear; */
@@ -33,11 +38,11 @@
 .filterRating {
   /* font-size: 5rem; */
   background-color: #fff;
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.212);
   width: 7rem;
   height: 3rem;
   /* background-color: transparent; */
-  border-radius: 10px;
+  border-radius: 100px;
   position: relative;
   cursor: pointer;
 }
@@ -48,7 +53,7 @@
   left: 0;
   height: 100%;
   width: 3rem;
-  background-color: blue;
+  background-color: var(--color-secondary-2-2);
   content: "";
   border-radius: 50%;
   transition: 0.5s all linear;
@@ -59,5 +64,38 @@
 }
 
 .active::before {
-  transform: translateX(120%);
+  transform: translateX(130%);
+
+  /* left: 100%; */
+}
+.filters {
+  display: flex;
+  gap: 2rem;
+  /* margin-left: auto; */
+  align-items: center;
+}
+
+.searchGame {
+  display: inline-block;
+  position: relative;
+}
+
+.searchIcon {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  right: -30%;
+  top: -50%;
+}
+
+input {
+  border-radius: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.199);
+  padding: 0.7rem 3rem 0.7rem 0.7rem;
+  text-transform: uppercase;
+  font-family: inherit;
+}
+
+input:focus {
+  outline: none;
 }
