@@ -10,6 +10,7 @@
 
 .navigation {
   max-width: 40rem;
+  /* min-width: 40rem; */
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -69,4 +70,81 @@ li {
 
 .humble:hover ~ .buble {
   transform: translateX(calc(100px * 4.5)) !important;
+}
+
+@media (max-width: 70em) {
+  li {
+    font-size: 1rem;
+  }
+  .buble {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .steam.selected ~ .buble {
+    transform: translateX(calc(100px * 1.6));
+  }
+
+  .gog.selected ~ .buble {
+    transform: translateX(calc(100px * 2.4));
+  }
+
+  .gog:hover ~ .buble {
+    transform: translateX(calc(100px * 2.4)) !important;
+  }
+
+  .uplay.selected ~ .buble {
+    transform: translateX(calc(100px * 3.1));
+  }
+
+  .uplay:hover ~ .buble {
+    transform: translateX(calc(100px * 3.1)) !important;
+  }
+
+  .humble.selected ~ .buble {
+    transform: translateX(calc(100px * 4.2));
+  }
+
+  .humble:hover ~ .buble {
+    transform: translateX(calc(100px * 4.2)) !important;
+  }
+
+  @media (max-width: 46.75em) {
+    .navigationWrapper {
+      display: flex;
+      justify-content: flex-start;
+    }
+    .navigastion {
+      /* width: 100%; */
+      /* display: inline-block; */
+    }
+
+    .steam.selected ~ .buble {
+      transform: translateX(calc(100px * 0.1));
+    }
+
+    .gog.selected ~ .buble {
+      transform: translateX(calc(100px * 0.9));
+    }
+
+    .gog:hover ~ .buble {
+      transform: translateX(calc(100px * 0.9)) !important;
+    }
+
+    .uplay.selected ~ .buble {
+      transform: translateX(calc(100px * 1.65));
+    }
+
+    .uplay:hover ~ .buble {
+      transform: translateX(calc(100px * 1.65)) !important;
+    }
+
+    .humble.selected ~ .buble {
+      transform: translateX(calc(100px * 2.78));
+    }
+
+    .humble:hover ~ .buble {
+      transform: translateX(calc(100px * 2.78)) !important;
+    }
+  }
 }

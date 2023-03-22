@@ -3,3 +3,9 @@
   margin: 0 auto;
   width: 85%;
 }
+
+@media (max-width: 46.75em) {
+  .container {
+    width: 100%;
+  }
+}

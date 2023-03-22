@@ -99,3 +99,27 @@ input {
 input:focus {
   outline: none;
 }
+
+@media (max-width: 70em) {
+  body {
+    font-size: 56.25%;
+  }
+
+  span {
+    font-size: 1rem;
+  }
+
+  .filter {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 40.875em) {
+  .filters {
+    display: flex;
+    gap: 2rem;
+    /* margin-left: auto; */
+    align-items: center;
+    flex-direction: column;
+  }
+}
