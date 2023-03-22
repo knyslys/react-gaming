@@ -85,6 +85,10 @@ li {
     transform: translateX(calc(100px * 1.6));
   }
 
+  .steam:hover ~ .buble {
+    transform: translateX(calc(100px * 1.6)) !important;
+  }
+
   .gog.selected ~ .buble {
     transform: translateX(calc(100px * 2.4));
   }
@@ -121,6 +125,10 @@ li {
 
     .steam.selected ~ .buble {
       transform: translateX(calc(100px * 0.1));
+    }
+
+    .steam:hover ~ .buble {
+      transform: translateX(calc(100px * 0.1)) !important;
     }
 
     .gog.selected ~ .buble {
